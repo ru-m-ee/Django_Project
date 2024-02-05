@@ -21,10 +21,10 @@ jobs:
 
       - name: Build and Push Web Container
         run: |
-          docker build -t rumeebs23/web_container:latest -f Dockerfile.web .
+          docker build -t rumeebs23/web_container:latest -f Dockerfile .
           docker push rumeebs23/web_container:latest
 
       - name: Build and Push Database Container
         run: |
-          docker build -t rumeebs23/database_container:latest -f Dockerfile.db .
-          docker push your-docker-username/database_container:latest
+          docker build -t rumeebs23/database_container:latest -f Dockerfile .
+          docker push rumeebs23/database_container:latest
