@@ -19,12 +19,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and Push Web Container
+      - name: Build and Push
         run: |
-          docker build -t rumeebs23/web_container:latest -f Dockerfile .
-          docker push rumeebs23/web_container:latest
-
-      - name: Build and Push Database Container
-        run: |
-          docker build -t rumeebs23/database_container:latest -f Dockerfile .
-          docker push rumeebs23/database_container:latest
+          docker build -t rumeebs23/django_project:latest -f Dockerfile .
+          docker push rumeebs23/django_project:latest
